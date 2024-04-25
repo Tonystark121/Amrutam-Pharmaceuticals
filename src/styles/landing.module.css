@@ -1,0 +1,80 @@
+@import '../vars.css';
+.box {
+  margin: auto;
+  width: 100%;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 95%;
+  margin: 2rem auto;
+  padding: 1.5rem;
+}
+.filterBox {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #EDEDED;
+}
+.filterItems{
+    width: 90%;
+    margin: auto;
+    height: 70px;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.filterBtn{
+    width: 120px;
+    height: 40px;
+    border-radius: 6px;
+    border: none;
+    background-color: #EAF2EA;
+    color: #333;
+    display: grid;
+    place-items: center;
+    position: relative;
+    font-size: 14px;
+    cursor: pointer;
+    border: 1px solid var(--btn-clr);
+    background-color: #F2FBF2;
+}
+.icon1{
+   position: absolute;
+   right: 5px;
+   top: 5px;
+   font-size: 12px;
+   font-weight: 700;
+   cursor: pointer;
+   color: #838383;
+}
+.filter {
+  position: relative;
+  width: 170px;
+  height: 40px;
+}
+.filter select {
+  width: 100%;
+  height: 100%;
+  padding: 6px 18px;
+  background-color: #f3f3f3;
+  border: none;
+  border-radius: 0.5rem;
+  outline: none;
+  appearance: none;
+}
+.icon {
+  position: absolute;
+  right: 1rem;
+  top: 13px;
+  font-size: 1rem;
+}
+.filter select option {
+  background-color: #f3f3f3;
+  color: #333;
+}

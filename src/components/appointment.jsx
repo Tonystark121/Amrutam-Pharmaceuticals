@@ -4,10 +4,10 @@ import styles from "../styles/appointment.module.css";
 const appointment = () => {
   const [startIdx, setStartIdx] = useState(0);
   const [endIdx, setEndIdx] = useState(3);
-  const [sessionMode, setSessionMode] = useState(null)
+  const [sessionMode, setSessionMode] = useState(null);
   let morningSlot = null;
   let eveningSlot = null;
-  let timeSlot = null
+  let timeSlot = null;
   // let sessionMode = null;
 
   const time1 = ["9", "9:30", "10", "10:15", "10:45", "11"];
@@ -65,11 +65,15 @@ const appointment = () => {
   // Selection Function
 
   const morningTime = (idx) => {
-    if (morningSlot !== null) {
+    if (morningSlot !== null || morningSlot === idx) {
       const prevtime = document.querySelector(`#btn${morningSlot}`);
       (prevtime.style.backgroundColor = "#ffffff"),
         (prevtime.style.color = "#131313");
       prevtime.style.border = "1px solid #ebebeb";
+    }
+    if (morningSlot === idx) {
+      morningSlot = null;
+      return;
     }
     morningSlot = idx;
     const time = document.querySelector(`#btn${idx}`);
@@ -79,11 +83,15 @@ const appointment = () => {
   };
 
   const eveningTime = (idx) => {
-    if (eveningSlot !== null) {
+    if (eveningSlot !== null || eveningSlot === idx) {
       const prevtime = document.querySelector(`#btn1${eveningSlot}`);
       (prevtime.style.backgroundColor = "#ffffff"),
         (prevtime.style.color = "#131313");
       prevtime.style.border = "1px solid #ebebeb";
+    }
+    if (eveningSlot === idx) {
+      eveningSlot = null;
+      return;
     }
     eveningSlot = idx;
     const time = document.querySelector(`#btn1${idx}`);
@@ -93,32 +101,40 @@ const appointment = () => {
   };
 
   const sessionType = (idx) => {
-    if (sessionMode !== null) {
+    if (sessionMode !== null || sessionMode === idx) {
       const prevtime = document.querySelector(`#box${sessionMode}`);
       (prevtime.style.backgroundColor = "#ffffff"),
         (prevtime.style.color = "#131313");
       prevtime.style.border = "1px solid #ebebeb";
     }
-    setSessionMode(idx)
+    if (sessionMode === idx) {
+      setSessionMode(null);
+      return;
+    }
+    setSessionMode(idx);
     const time = document.querySelector(`#box${idx}`);
     console.log(time);
     time.style.backgroundColor = "#F2FBF2";
-    time.style.border = '1px solid #3A643B'
+    time.style.border = "1px solid #3A643B";
   };
 
   const selectSlot = (idx) => {
-    if (timeSlot !== null) {
+    if (timeSlot !== null || timeSlot === idx) {
       const prevtime = document.querySelector(`#item${timeSlot}`);
       (prevtime.style.backgroundColor = "#ffffff"),
         (prevtime.style.color = "#131313");
       prevtime.style.border = "1px solid #ebebeb";
     }
-    timeSlot = idx
+    if (timeSlot === idx) {
+      timeSlot = null;
+      return;
+    }
+    timeSlot = idx;
     const time = document.querySelector(`#item${idx}`);
     console.log(time);
     time.style.backgroundColor = "#F2FBF2";
-    time.style.border = '1px solid #3A643B'
-  }
+    time.style.border = "1px solid #3A643B";
+  };
 
   return (
     <div className={styles.main}>
@@ -133,34 +149,19 @@ const appointment = () => {
       <div className={styles.connect}>
         <div className={styles.box} id="box1" onClick={() => sessionType(1)}>
           <div>
-            <p>
-              In-clinic{" "}
-              {sessionMode!==null && (
-                <img src="./assets/tick.svg" width={15} height={15} style={{marginTop:'12px'}} />
-              )}{" "}
-            </p>
+            <p>In-clinic </p>
             <p className={styles.time}>45 Mins</p>
           </div>
         </div>
         <div className={styles.box} id="box2" onClick={() => sessionType(2)}>
           <div>
-            <p>
-              Video{" "}
-              {sessionMode!==null && (
-                <img src="./assets/tick.svg" width={15} height={15} />
-              )}{" "}
-            </p>
+            <p>Video </p>
             <p className={styles.time}>45 Mins</p>
           </div>
         </div>
         <div className={styles.box} id="box3" onClick={() => sessionType(3)}>
           <div>
-            <p>
-              Chat{" "}
-              {sessionMode!==null && (
-                <img src="./assets/tick.svg" width={15} height={15} />
-              )}{" "}
-            </p>
+            <p>Chat </p>
             <p className={styles.time}>45 Mins</p>
           </div>
         </div>
@@ -181,9 +182,15 @@ const appointment = () => {
         />
         <div className={styles.slots}>
           {slot.slice(startIdx, endIdx).map((item, idx) => (
-            <div className={styles.items} key={idx} id={`item${idx}`} onClick={()=>selectSlot(idx)}>
+            <div
+              className={styles.items}
+              key={idx}
+              id={`item${idx}`}
+              onClick={() => selectSlot(idx)}
+            >
               <div>
-                <p className={styles.itemsDate}>{item.date}</p>
+                <p className={styles.itemsDate}>{item.date}
+                </p>
                 <p
                   className={styles.itemsSlot}
                   style={{ color: `${item.color}` }}

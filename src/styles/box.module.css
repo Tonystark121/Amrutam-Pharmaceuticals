@@ -1,0 +1,115 @@
+.card {
+  min-width: 356px;
+  height: 520px;
+  background-color: #fff7e2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1.5rem;
+}
+.image {
+  width: 149px;
+  height: 150px;
+  border-radius: 50%;
+  background-image: url("../../public/assets/photo.png");
+  background-size: 149px 150px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+.rating {
+  background-image: linear-gradient(
+    to left,
+    rgba(11, 11, 11, 1),
+    rgba(11, 11, 11, 0.79)
+  );
+  color: rgba(255, 255, 255, 1);
+  width: 70px;
+  height: 28px;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-evenly;
+  border-radius: 17px;
+  align-items: center;
+}
+.rating > div {
+  color: yellow;
+  font-size: 20px;
+  display: flex;
+}
+.main {
+  width: 100%;
+  padding: 0.5rem 0;
+  padding-left: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.card p {
+  color: rgba(100, 102, 101, 1);
+  font-size: 14px;
+  display: flex;
+  margin: 5px;
+}
+.card p img {
+  display: flex;
+  height: 18px;
+  width: 16px;
+  margin-right: 10px;
+}
+.speciality {
+  border: 1px solid rgba(100, 102, 101, 1);
+  width: 6px;
+  transform: rotate(45deg);
+  margin-right: 10px;
+  border-radius: 9px;
+  height: 30px;
+}
+.icons {
+  color: rgba(100, 102, 101, 1);
+  padding-right: 8px;
+}
+.consult {
+  display: flex;
+  gap: 1rem;
+  margin-top: 12px;
+}
+.consultation {
+  color: rgba(60, 60, 60, 1);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(58, 100, 59, 0.39);
+  padding: 8px 8px 16px 8px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+.consultation > span {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  margin-bottom: -10px;
+  color: rgba(58, 100, 59, 1);
+  cursor: pointer;
+}
+.profile {
+  color: rgba(58, 100, 59, 1);
+  width: 284px;
+  height: 42px;
+  margin-top: 30px;
+  border-radius: 8px;
+  border: 1px solid rgba(58, 100, 59, 1);
+}
+.profile:hover{
+  color: rgba(60, 60, 60, 1);
+  background-color: #F2FBF2;
+}
+.booking {
+  background: rgba(58, 100, 59, 1);
+  color: rgba(255, 255, 255, 1);
+  width: 284px;
+  height: 42px;
+  margin-top: 20px;
+  border: 1px;
+  border-radius: 8px;
+}
