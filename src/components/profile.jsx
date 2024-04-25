@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../styles/profile.module.css";
 import { FaStar } from "react-icons/fa";
+import img from '../../public/assets/photo.svg'
 
 const profile = () => {
   return (
