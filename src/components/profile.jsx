@@ -1,11 +1,12 @@
 import React from "react";
 import styles from "../styles/profile.module.css";
 import { FaStar } from "react-icons/fa";
-import img from '../../public/assets/photo.svg'
+import img from '../../public/assets/profile.svg'
 
 const profile = () => {
   return (
     <div className={styles.profileBox}>
+      <img src={img} alt="profile" />
       <div className={styles.main}>
         <div className={styles.image}>
           <img src="./assets/photo.svg" alt="profile" />

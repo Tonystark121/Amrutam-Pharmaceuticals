@@ -6,7 +6,17 @@
   justify-content: flex-end;
   width: 100%;
   height: 240px;
-  background-image: url("../../public/assets/profile.svg");
+  /* background-image: url("../../public/assets/profile.svg"); */
+  border-radius: 12px;
+  position: relative;
+}
+.profileBox > img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background:cover;
+  background-repeat: none;
+  z-index: -1;
   border-radius: 12px;
 }
 .main {
