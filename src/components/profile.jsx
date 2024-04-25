@@ -32,12 +32,12 @@ const profile = () => {
               <h4>850</h4>
             </div>
             <div>
-              <p>Followers</p>
-              <h4>850</h4>
+              <p>Following</p>
+              <h4>18K</h4>
             </div>
             <div>
-              <p>Followers</p>
-              <h4>850</h4>
+              <p>Posts</p>
+              <h4>250</h4>
             </div>
           </div>
           <button>Book a Appointment</button>

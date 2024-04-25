@@ -53,3 +53,10 @@
   border: 2px solid var(--btn-clr);
   color: #3a643b;
 }
+.navlink{
+  color: #474747;
+  text-decoration: none;
+  &:active{
+    color: var(--btn-clr);
+  }
+}

@@ -5,6 +5,8 @@ const appointment = () => {
   const [startIdx, setStartIdx] = useState(0);
   const [endIdx, setEndIdx] = useState(3);
   const [sessionMode, setSessionMode] = useState(null);
+  const [currId, setCurrIdx] = useState('')
+
   let morningSlot = null;
   let eveningSlot = null;
   let timeSlot = null;
@@ -112,6 +114,7 @@ const appointment = () => {
       return;
     }
     setSessionMode(idx);
+    setCurrIdx(idx)
     const time = document.querySelector(`#box${idx}`);
     console.log(time);
     time.style.backgroundColor = "#F2FBF2";
@@ -149,19 +152,19 @@ const appointment = () => {
       <div className={styles.connect}>
         <div className={styles.box} id="box1" onClick={() => sessionType(1)}>
           <div>
-            <p>In-clinic </p>
+            <p>In-clinic {" "} {currId === 1 && <img src="./assets/tick.svg" style={{marginTop:'10px'}} width={15} height={15} />} </p>
             <p className={styles.time}>45 Mins</p>
           </div>
         </div>
         <div className={styles.box} id="box2" onClick={() => sessionType(2)}>
           <div>
-            <p>Video </p>
+            <p>Video {" "} {currId === 2 && <img src="./assets/tick.svg" style={{marginTop:'10px'}} width={15} height={15} />} </p>
             <p className={styles.time}>45 Mins</p>
           </div>
         </div>
         <div className={styles.box} id="box3" onClick={() => sessionType(3)}>
           <div>
-            <p>Chat </p>
+            <p>Chat {" "} {currId === 3 && <img src="./assets/tick.svg" style={{marginTop:'10px'}} width={15} height={15} />} </p>
             <p className={styles.time}>45 Mins</p>
           </div>
         </div>
