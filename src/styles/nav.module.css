@@ -1,0 +1,55 @@
+@import "../vars.css";
+
+/* Navbar */
+.nav {
+  width: 100%;
+  height: 80px;
+  background-color: var(--nav-clr);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+.tabs {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+.tabs img {
+  width: 220px;
+  height: 50px;
+  cursor: pointer;
+}
+.tabs ul {
+  display: flex;
+  list-style-type: none;
+  gap: 40px;
+}
+.tabs ul li {
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: #474747;
+}
+.btns {
+  display: flex;
+  gap: 10px;
+}
+.btn {
+  background-color: var(--btn-clr);
+  width: 120px;
+  height: 46px;
+  border-radius: 11px;
+  cursor: pointer;
+  border: none;
+  color: var(--primary-clr);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.btn1 {
+  width: 100px;
+  height: 46px;
+  background-color: #fff7e2;
+  border: 2px solid var(--btn-clr);
+  color: #3a643b;
+}

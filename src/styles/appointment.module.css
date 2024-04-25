@@ -1,0 +1,189 @@
+@import "../vars.css";
+
+.main {
+  width: 540px;
+  height: auto;
+  border: 1px solid #dcdcdc;
+  padding: 1.5rem 1rem 1.5rem 1rem;
+  border-radius: 18px;
+  background-color: var(--primary-clr);
+}
+.heading {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  border: 1px solid #e2e2e2;
+  border-radius: 12px;
+}
+.title {
+  color: #000000;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.price {
+  color: var(--btn-clr);
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+.mode {
+  display: flex;
+  align-items: center;
+  margin: 1.75rem 0;
+  justify-content: space-between;
+}
+.mode p {
+  color: #000000;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.mode div {
+  width: 50%;
+  height: 1px;
+  background-color: #d4d4d4;
+}
+.connect {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.box {
+  width: 140px;
+  height: 78px;
+  border: 1px solid #e5e5e5;
+  border-radius: 1rem;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+.box > div {
+  text-align: center;
+}
+.box * p {
+  color: #1f1f1f;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.box .time {
+  color: #606060;
+  font-weight: 400;
+  margin-top: 5px;
+  font-size: 14px;
+}
+.myClass {
+  background-color: #3a643b85;
+  color: var(--btn-clr);
+  border: 1px solid var(--btn-clr);
+}
+.cal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.options {
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #e2e2e2;
+  border-radius: 12px;
+  position: relative;
+}
+.slots {
+  width: 85%;
+  height: auto;
+  padding: 1rem;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.slots::-webkit-scrollbar {
+  display: none;
+}
+.slots .items {
+  min-width: 115px;
+  height: 70px;
+  display: grid;
+  place-items: center;
+  font-size: 14px;
+  border: 1px solid #e2e2e2;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+.options img{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+}
+.options .left{
+    left: 1rem;
+    top:3.75rem;
+    cursor: pointer;
+}
+.options .right{
+    right: 1rem;
+    top:3.75rem;
+    cursor: pointer;
+}
+.slots .items > div {
+  text-align: center;
+}
+.itemsDate{
+    color: var(--btn-clr);
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+.itemsSlot{
+    color: red;
+}
+.schedule {
+  margin: 2rem 0;
+}
+.schedule h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 10px;
+}
+.schedule > div {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+button {
+  width: 100px;
+  height: 60px;
+  border: 1px solid #ebebeb;
+  border-radius: 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #131313;
+  background-color: var(--primary-clr);
+  cursor: pointer;
+}
+.submit {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+.Btn {
+  width: 90%;
+  height: 60px;
+  background-color: var(--btn-clr);
+  color: var(--primary-clr);
+  font-weight: 600;
+  justify-content: center;
+}
+.myClass{
+  background-color: var(--btn-clr);
+  color: var(--primary-clr);
+  border: none;
+}

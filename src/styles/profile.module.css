@@ -1,0 +1,101 @@
+@import "../vars.css";
+
+.profileBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  height: 240px;
+  background-image: url("./assets/profile.svg");
+  border-radius: 12px;
+}
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 111px;
+  background-color: var(--nav-clr);
+  margin-top: auto;
+  position: relative;
+  padding-left: 5rem; 
+}
+.image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid var(--primary-clr);
+  position: absolute;
+  left: 1.5rem;
+  top: -2rem;
+}
+.image img {
+  width: 100%;
+  height: 100%;
+  background: cover;
+}
+.box{
+  width: 90%;
+  height: 100%;
+  /* background-color: red; */
+  padding-left: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.profile{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: .3rem;
+}
+.name{
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+}
+.name p{
+   color: #212529;
+   font-size: 1.1rem;
+}
+.name img{
+  width: 16px;
+  height: 16px;
+}
+.profile .specilist{
+  color: var(--btn-clr);
+}
+.profile > p{
+  display: flex;
+  align-items: center;
+  color: #626262;
+  gap: .5rem;
+}
+.profile .icon{
+  color: orange;
+  margin-right: 4px;
+}
+.info{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 60px;
+}
+.info > div{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.info > div p{
+  color: var(--btn-clr);
+}
+.box button{
+  width: 200px;
+  height: 50px;
+  border-radius: 12px;
+  border: none;
+  background-color: var(--btn-clr);
+  color: var(--primary-clr);
+  font-size: 1.1rem;
+  font-weight: 500;
+}
